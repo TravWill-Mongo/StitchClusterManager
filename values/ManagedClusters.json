@@ -1,0 +1,7 @@
+{
+    "name": "ManagedClusters",
+    "value": [
+        "mflix"
+    ],
+    "from_secret": false
+}

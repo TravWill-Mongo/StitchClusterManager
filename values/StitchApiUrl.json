@@ -1,0 +1,5 @@
+{
+    "name": "StitchApiUrl",
+    "value": "https://stitch.mongodb.com/api/admin/v3.0",
+    "from_secret": false
+}

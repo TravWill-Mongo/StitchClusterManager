@@ -1,0 +1,5 @@
+{
+    "name": "ManagedProjectPrivateKey",
+    "value": "ManagedProjectPrivateKeySecret",
+    "from_secret": true
+}
