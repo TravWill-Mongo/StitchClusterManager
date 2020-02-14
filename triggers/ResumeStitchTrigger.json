@@ -1,0 +1,9 @@
+{
+    "name": "ResumeStitchTrigger",
+    "type": "SCHEDULED",
+    "config": {
+        "schedule": "10 13 * * 1-5"
+    },
+    "function_name": "ResumeStitchFunction",
+    "disabled": false
+}

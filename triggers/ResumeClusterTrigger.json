@@ -1,0 +1,9 @@
+{
+    "name": "ResumeClusterTrigger",
+    "type": "SCHEDULED",
+    "config": {
+        "schedule": "0 13 * * 1-5"
+    },
+    "function_name": "ResumeClusterFunction",
+    "disabled": false
+}

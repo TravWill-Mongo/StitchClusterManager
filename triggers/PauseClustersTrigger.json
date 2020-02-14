@@ -1,0 +1,9 @@
+{
+    "name": "PauseClustersTrigger",
+    "type": "SCHEDULED",
+    "config": {
+        "schedule": "59 23 * * 1-5"
+    },
+    "function_name": "PauseClusterFunction",
+    "disabled": false
+}
