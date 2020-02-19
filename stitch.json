@@ -1,6 +1,7 @@
 {
+    "app_id": "atlasclustermanager2-qudtq",
     "config_version": 20180301,
-    "name": "AtlasClusterManager",
+    "name": "AtlasClusterManager2",
     "location": "US-VA",
     "deployment_model": "GLOBAL",
     "security": {},

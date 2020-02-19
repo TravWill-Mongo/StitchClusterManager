@@ -2,9 +2,7 @@ exports = async function() {
   accessToken = await getAccessToken();
   stitchApps = await getStitchApps(accessToken);
   triggers = await getAllTriggers(accessToken, stitchApps);
-  resume = await resumeAllTriggers(accessToken, triggers);
-  
-  return resume;
+  return await resumeAllTriggers(accessToken, triggers);
 }
 
 async function getAccessToken() {
@@ -25,7 +23,7 @@ async function getAccessToken() {
 async function getStitchApps(token) {
     const baseStitchURL = context.values.get("StitchApiUrl");
     const ManagedProjectID = context.values.get("ManagedProjectID");
-  stitchResponse = await context.http.get({
+    stitchResponse = await context.http.get({
     url: baseStitchURL+"/groups/"+ManagedProjectID+"/apps",
     headers: {
       "Authorization": ["Bearer "+token],

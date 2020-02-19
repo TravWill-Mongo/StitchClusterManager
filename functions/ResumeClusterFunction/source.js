@@ -8,7 +8,7 @@ exports = async function() {
   
   const output = [];
   
-  for(let n in clusterNames) {
+  for(let n = 0; n<clusterNames.length; n++) {
     const arg = { 
       scheme: 'https', 
       host: 'cloud.mongodb.com', 
@@ -23,10 +23,10 @@ exports = async function() {
     // The response body is a BSON.Binary object. Parse it and return.
     response = await context.http.patch(arg);
     
-    output.push(EJSON.parse(response.body.text()));
+    result = EJSON.parse(response.body.text());
+    
+    output.push("Resumed Cluster Details - Name: "+result.name+", Instance Size: "+result.providerSettings.instanceSizeName+", Provider: "+result.providerSettings.providerName+", Region: "+result.providerSettings.regionName);
     
   }
-  
-
   return output.join("\n");
 }
