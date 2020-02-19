@@ -50,16 +50,19 @@ $ stitch-cli secrets add --name=ManagedProjectPrivateKeySecret --value=SuperSecr
 # 4. Re-Import the Stitch App, now that the secrets exist
 $ stitch-cli import --project-id <<ProjectID>>
 ```
-3. Update Values and Secrets
+3. Update Values
+    - ManagedProjectID: This value was previously used on the import command.
+    - ManagedClusters: This is an Array of strings, that identify the name of the clusters in your project. Multiple clusters can be added as needed.
 
-![Values](images/values.png)
-![Secrets](images/secrets.png)
+4. Update Secrets
+    - ManagedProjectPublicKeySecret: This value was previously used on the import command.
+    - ManagedProjectPrivateKeySecret: This value was previously used on the import command.
 
-4. Review and Deploy Changes
+5. Review and Deploy Changes
 
 ![Deploy](images/deploy.png)
 
-5. Test Pause/Resume Functions
+6. Test Pause/Resume Functions
 
 ### Additional Settings:
 - You can adjust the Time and Frequency of your triggers as needed. Defaults are set to 7am CST for Resume and 7pm CST for Pause.
@@ -68,8 +71,3 @@ $ stitch-cli import --project-id <<ProjectID>>
 ## Special Thanks:
 - Richard Arnold for the inspiration of exploring cost saving measures managing our infrastructure as code
 - Brian Legend for this article: https://www.mongodb.com/blog/post/atlas-cluster-automation-using-scheduled-triggers
-
-### To-dos/Features:
-- [ ] Clean up code for final release
-- [ ] Update README introduction
-- [ ] Provide Screenshots
