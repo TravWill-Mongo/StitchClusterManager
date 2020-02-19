@@ -27,28 +27,28 @@ Stitch Triggers are developed on top of the Change Streams introduced in 3.6. A 
 ### Installation:
 1. Download this repo, uncompress, and CD to repo folder
 ```sh
-$ git clone https://github.com/TravWill-Mongo/StitchClusterManager.git
-$ cd ./StitchClusterManager
+git clone https://github.com/TravWill-Mongo/StitchClusterManager.git
+cd ./StitchClusterManager
 ```
 2. From your Terminal, Perform the following steps:
 ```sh
 # 1. Login to Stitch CLI
-$ stitch-cli login --api-key=my-api-key --private-api-key=my-private-api-key
+stitch-cli login --api-key=my-api-key --private-api-key=my-private-api-key
 
 # 2. Run the initial Import of the Stitch App
 # Notes: 
 #    An error is expected due to the lack of existing Secrets.
 #    The first import will create an empty Stitch App for us to create the secrets on.
-$ stitch-cli import --project-id <<ProjectID>>
+stitch-cli import --project-id=ProjectID
 
 # 3. Create the initial Secrets for the Public and Private API Keys
 # Note: 
 #    These can be updated from the Atlas UI Later. We just need the secrets to exist for the import to succeed.
-$ stitch-cli secrets add --name=ManagedProjectPublicKeySecret --value=SuperSecretValue!
-$ stitch-cli secrets add --name=ManagedProjectPrivateKeySecret --value=SuperSecretValue!
+stitch-cli secrets add --name=ManagedProjectPublicKeySecret --value=SuperSecretValue!
+stitch-cli secrets add --name=ManagedProjectPrivateKeySecret --value=SuperSecretValue!
 
 # 4. Re-Import the Stitch App, now that the secrets exist
-$ stitch-cli import --project-id <<ProjectID>>
+stitch-cli import --project-id=ProjectID --strategy=replace
 ```
 3. Update Values
     - ManagedProjectID: This value was previously used on the import command.
