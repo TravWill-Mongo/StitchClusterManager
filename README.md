@@ -51,10 +51,12 @@ $ stitch-cli secrets add --name=ManagedProjectPrivateKeySecret --value=SuperSecr
 $ stitch-cli import --project-id <<ProjectID>>
 ```
 3. Update Values and Secrets
+
 ![Values](images/values.png)
 ![Secrets](images/secrets.png)
 
 4. Review and Deploy Changes
+
 ![Deploy](images/deploy.png)
 
 5. Test Pause/Resume Functions
