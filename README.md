@@ -3,6 +3,8 @@ This will create a new Stitch App called "AtlasClusterManager" with the purpose 
 
 Stitch Triggers are developed on top of the Change Streams introduced in 3.6. A limitation of Change Streams is that they will suspend their connection when an "Invalidate" event occurs. Coincidentally, pausing a cluster will ultimately "Invalidate" all Change Streams and Triggers. In addition to the Stitch Triggers that exist inside of the Stitch App, it is possible to have "Atlas Triggers", which are those accessible from the main Atlas View. To fix the suspended Triggers, you can either manually navigate to each trigger and enable them with a click of a button. Or you can automate this with the function provided!
 
+![Cluster](images/cluster.png)
+
 ### Example Use Cases:
 - Developers who only test during certain days and hours
 - SA's who only resume a cluster for a demo, and want the piece of mind that it will auto pause later that day.
@@ -49,7 +51,12 @@ $ stitch-cli secrets add --name=ManagedProjectPrivateKeySecret --value=SuperSecr
 $ stitch-cli import --project-id <<ProjectID>>
 ```
 3. Update Values and Secrets
+![Values](images/values.png)
+![Secrets](images/secrets.png)
+
 4. Review and Deploy Changes
+![Deploy](images/deploy.png)
+
 5. Test Pause/Resume Functions
 
 ### Additional Settings:
