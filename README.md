@@ -12,7 +12,7 @@ Stitch Triggers are developed on top of the Change Streams introduced in 3.6. A 
     - M10+ Cluster (The cluster that will be managed by the process)
 - Atlas Information Required:
     - Project ID
-    - Public and Private API Keys
+    - Public and Private API Keys (w/ Permissions "Project Owner" and "Project Cluster Manager")
 - Stitch CLI: https://docs.mongodb.com/stitch/deploy/stitch-cli-reference/#installation
 
 ### Known Limitations:
@@ -22,6 +22,8 @@ Stitch Triggers are developed on top of the Change Streams introduced in 3.6. A 
     - Cluster was resumed less than 60 minutes prior
 
 ### Installation:
+This process should take roughly 15 minutes to complete.
+
 1. Download this repo, uncompress, and CD to repo folder
 ```sh
 git clone https://github.com/TravWill-Mongo/StitchClusterManager.git
