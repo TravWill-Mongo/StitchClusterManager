@@ -48,12 +48,12 @@ stitch-cli secrets add --name=ManagedProjectPrivateKeySecret --value=SuperSecret
 stitch-cli import --project-id=ProjectID --strategy=replace
 ```
 3. From the Stitch App, Navigate to "Values & Secrets"
-4. Under the "Values" Tab, you will need to update the following:
-    - ManagedProjectID: This value was previously used on the import command.
-    - ManagedClusters: This is an Array of strings, that identify the name of the clusters in your project. Multiple clusters can be added as needed.
-5. Under the "Secrets" Tab, you will need to update the following:
-    - ManagedProjectPublicKeySecret: This value was previously used on the import command.
-    - ManagedProjectPrivateKeySecret: This value was previously used on the import command.
+    - Under the "Values" Tab, you will need to update the following:
+        - ManagedProjectID: This value was previously used on the import command.
+        - ManagedClusters: This is an Array of strings, that identify the name of the clusters in your project. Multiple clusters can be added as needed.
+    - Under the "Secrets" Tab, you will need to update the following:
+        - ManagedProjectPublicKeySecret: This value was previously used on the import command.
+        - ManagedProjectPrivateKeySecret: This value was previously used on the import command.
 
 6. Review and Deploy Changes
 
