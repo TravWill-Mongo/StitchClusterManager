@@ -3,15 +3,12 @@ This will create a new Stitch App called "AtlasClusterManager" with the purpose 
 
 Stitch Triggers are developed on top of the Change Streams introduced in 3.6. A limitation of Change Streams is that they will suspend their connection when an "Invalidate" event occurs. Coincidentally, pausing a cluster will ultimately "Invalidate" all Change Streams and Triggers. In addition to the Stitch Triggers that exist inside of the Stitch App, it is possible to have "Atlas Triggers", which are those accessible from the main Atlas View. To fix the suspended Triggers, you can either manually navigate to each trigger and enable them with a click of a button. Or you can automate this with the function provided!
 
-![Cluster](images/cluster.png)
-
 ### Example Use Cases:
 - Developers who only test during certain days and hours
 - SA's who only resume a cluster for a demo, and want the piece of mind that it will auto pause later that day.
 
 ### Prequisites:
 - Existing Atlas Project
-    - M0 Cluster (Free Forever, Used for housing the Stitch App)
     - M10+ Cluster (The cluster that will be managed by the process)
 - Atlas Information Required:
     - Project ID
@@ -50,23 +47,24 @@ stitch-cli secrets add --name=ManagedProjectPrivateKeySecret --value=SuperSecret
 # 4. Re-Import the Stitch App, now that the secrets exist
 stitch-cli import --project-id=ProjectID --strategy=replace
 ```
-3. Update Values
+3. From the Stitch App, Navigate to "Values & Secrets"
+4. Under the "Values" Tab, you will need to update the following:
     - ManagedProjectID: This value was previously used on the import command.
     - ManagedClusters: This is an Array of strings, that identify the name of the clusters in your project. Multiple clusters can be added as needed.
-
-4. Update Secrets
+5. Under the "Secrets" Tab, you will need to update the following:
     - ManagedProjectPublicKeySecret: This value was previously used on the import command.
     - ManagedProjectPrivateKeySecret: This value was previously used on the import command.
 
-5. Review and Deploy Changes
+6. Review and Deploy Changes
 
 ![Deploy](images/deploy.png)
 
-6. Test Pause/Resume Functions
+7. Test Pause/Resume Functions
 
 ### Additional Settings:
 - You can adjust the Time and Frequency of your triggers as needed. Defaults are set to 7am CST for Resume and 7pm CST for Pause.
 - If you rarely use your cluster, and only want it to Pause the same day you manually resume it. Simply "Disable" the Resume Triggers.
+- If you do not have any Triggers/Change Streams associated to the cluster that is being managed, you can disable the "ResumeStitchTrigger"
 
 ## Special Thanks:
 - Richard Arnold for the inspiration of exploring cost saving measures managing our infrastructure as code

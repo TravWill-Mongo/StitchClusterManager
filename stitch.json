@@ -1,7 +1,7 @@
 {
-    "app_id": "atlasclustermanager-qudtq",
+    "app_id": "atlasclustermanager-tpdcp",
     "config_version": 20180301,
-    "name": "AtlasClusterManager2",
+    "name": "AtlasClusterManager",
     "location": "US-VA",
     "deployment_model": "GLOBAL",
     "security": {},
