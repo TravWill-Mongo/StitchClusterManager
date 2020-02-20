@@ -12,7 +12,7 @@ Stitch Triggers are developed on top of the Change Streams introduced in 3.6. A 
     - M10+ Cluster (The cluster that will be managed by the process)
 - Atlas Information Required:
     - Project ID
-    - Public and Private API Keys (w/ Permissions "Project Owner" and "Project Cluster Manager")
+    - Public and Private API Keys (w/ "Project Owner" permissions for Stitch and Cluster Management)
 - Stitch CLI: https://docs.mongodb.com/stitch/deploy/stitch-cli-reference/#installation
 
 ### Known Limitations:
