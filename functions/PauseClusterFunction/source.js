@@ -28,7 +28,7 @@ exports = async function() {
     try {
       output.push("Paused Cluster Details - Name: "+result.name+", Instance Size: "+result.providerSettings.instanceSizeName+", Provider: "+result.providerSettings.providerName+", Region: "+result.providerSettings.regionName+", Status: Paused");
     } catch (error) {
-      output.push("Paused Cluster Details - Name: "+result.name+", Status: Previously Paused");
+      output.push("Paused Cluster Details - Name: "+clusterNames[n]+", Status: Previously Paused");
     }
     
   }
