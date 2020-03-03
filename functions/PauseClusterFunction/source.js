@@ -25,7 +25,11 @@ exports = async function() {
     
     result = EJSON.parse(response.body.text());
     
-    output.push("Paused Cluster Details - Name: "+result.name+", Instance Size: "+result.providerSettings.instanceSizeName+", Provider: "+result.providerSettings.providerName+", Region: "+result.providerSettings.regionName);
+    try {
+      output.push("Paused Cluster Details - Name: "+result.name+", Instance Size: "+result.providerSettings.instanceSizeName+", Provider: "+result.providerSettings.providerName+", Region: "+result.providerSettings.regionName+", Status: Paused");
+    } catch (error) {
+      output.push("Paused Cluster Details - Name: "+result.name+", Status: Previously Paused");
+    }
     
   }
   return output.join("\n");
