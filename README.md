@@ -67,7 +67,7 @@ stitch-cli import --project-id=ProjectID --strategy=replace
 
 ### Special Thanks:
 - Richard Arnold for the inspiration of exploring infrastructure as code
-- Brian Legend for this article: https://www.mongodb.com/blog/post/atlas-cluster-automation-using-scheduled-triggers
+- Brian Leonard for this article: https://www.mongodb.com/blog/post/atlas-cluster-automation-using-scheduled-triggers
 
 ### Disclaimer:
 This stitch app is not battle tested, nor regularly maintained, and does not include a warranty! Feel free to update and contribute as needed!
